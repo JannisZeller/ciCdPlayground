@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 jobs:
-  Exercise CI:
+  Exercise-CI:
     runs-on: ubuntu-latest
     
     steps:
