@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Exercise CI
 
 on:
   workflow_dispatch:
@@ -8,6 +8,7 @@ on:
 jobs:
   checkout:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
@@ -30,3 +31,8 @@ jobs:
       - name: Integration tests
         run: yarn test:e2e
         continue-on-error: true
+
+      - name: JUnit Report Action
+        uses: mikepenz/action-junit-report@v5.2.0
+        with:
+          report_paths: "reports/*xml"
