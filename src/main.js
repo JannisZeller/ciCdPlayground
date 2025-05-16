@@ -9,10 +9,10 @@ new App({
     // or an array of bullet points
 
     // What do you associate with the term 'CI/CD'?
-    associations: ["red, green and yellow", "fast feedback", "iterative development process"],
+    associations: ["automation"],
     // Which CI/CD tools do you use in your project?
-    tools: "Jenkins",
+    tools: "None",
     // What do you want to learn in this workshop?
-    expectations: ["How to improve the workshop.", "Which CI/CD Tools do you use in your projects?"],
+    expectations: ["First introduction", "Preparations for first project"],
   },
 });
