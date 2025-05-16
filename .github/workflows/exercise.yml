@@ -26,13 +26,12 @@ jobs:
         
       - name: Unit tests
         run: yarn test
-        continue-on-error: true
         
       - name: Integration tests
         run: yarn test:e2e
-        continue-on-error: true
 
       - name: JUnit Report Action
+        if: always() 
         uses: mikepenz/action-junit-report@v5.2.0
         with:
           report_paths: "reports/*xml"
